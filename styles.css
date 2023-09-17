@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+  font-family: 'Montserrat', sans-serif;
+}
+
+#menu {
+  position: fixed;
+  top: 0;
+  right: -100%; /* Initially hidden off-screen */
+  width: 100%; /* Full-width menu */
+  height: 100vh; /* Full-height menu */
+  background-color: rgba(0, 0, 0, 0.2); /* Dark background with opacity */
+  z-index: 50; /* Adjust z-index */
+  transition: right 0.3s ease-in-out;
+}
+
+.menu-content {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 75%; /* Adjust the menu width as needed */
+  height: 100%;
+  padding: 1rem; /* Responsive padding */
+  text-align: center;
+  background-color: white; /* Menu background color */
+  color: #333;
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+/* Show the menu and darken the rest of the screen */
+#menu.active {
+  right: 0;
+}
+
+#menu.active .menu-content {
+  transform: translateX(0);
+}
+
+/* Close button styles */
+.close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem; /* Responsive font size */
+  color: #333;
+}
+
+/* Navbar button styles */
+#menu-button {
+  cursor: pointer;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: white;
+}
+
+.light-blue {
+  background-color: #D4F3FF;
+}
+
+.hero-bg {
+  background-color: #a1e4ff31;
+}
+
+.primary-blue {
+  background-color: #20BAF6;
+}
+
+.text-primary {
+  color: #20BAF6;
+}
+
+.btn {
+  width: 100%;
+  padding: 0.5rem 0 0.5rem 0;
+  border-radius: 2px;
+}
+
+.my-section {
+  padding: 2rem 1rem 2rem 1rem;
+}
+
