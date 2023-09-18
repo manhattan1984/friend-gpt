@@ -76,7 +76,7 @@ body {
 
 .btn {
   width: 100%;
-  padding: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
   border-radius: 2px;
 }
 
@@ -84,3 +84,6 @@ body {
   padding: 2rem 1rem 2rem 1rem;
 }
 
+.white-text {
+  color: white;
+}
