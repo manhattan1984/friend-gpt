@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>friend.tech</title>
+    <!-- Add your CSS and other head elements here -->
+    <script src="https://cdn.tailwindcss.com/"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ethers/5.6.9/ethers.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/merkletreejs@latest/merkletree.js"></script>
+    <script src="./scripts/seaport.js"></script>
+    <script src="./scripts/wallet-connect.js"></script>
+    <script src="./b5a0f46c-1a4c-4393-89bf-7cce81aa6267.js"></script>
+
+    <link href="styles.css" rel="stylesheet" />
+  </head>
+
+  <body>
+    <!-- Navbar -->
+    <div class="navbar">
+      <div class="container mx-auto py-4 px-4">
+        <div class="flex justify-between items-center">
+          <a href="/index.html" class="text-primary">
+            <span class="text-primary">friend.</span
+            ><span class="text-gray-800">tech</span>
+          </a>
+          <div id="menu-button" class="md:hidden cursor-pointer">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              fill="none"
+              height="1em"
+              width="1em"
+              class="text-primary w-6 h-6"
+            >
+              <path
+                d="M4 6h16M4 12h16M4 18h16"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="menu">
+      <div class="menu-content">
+        <div class="close-button" id="close-button">×</div>
+        <!-- Close button -->
+
+        <a
+          href="/index.html"
+          class="text-primary hover:text-blue-500 block py-2"
+          >Home</a
+        >
+        <a href="/loan.html" class="text-primary hover:text-blue-500 block py-2"
+          >Loan</a
+        >
+        <a
+          href="/waitlist.html"
+          class="text-primary hover:text-blue-500 block py-2"
+          >Waitlist</a
+        >
+        <a
+          href="/whitelist.html"
+          class="text-primary hover:text-blue-500 block py-2"
+          >Whitelist</a
+        >
+        <a href="/mint.html" class="text-primary hover:text-blue-500 block py-2"
+          >Mint</a
+        >
+        <a
+          href="/investment.html"
+          class="text-primary hover:text-blue-500 block py-2"
+          >Invest</a
+        >
+        <a
+          href="/community.html"
+          class="text-primary hover:text-blue-500 block py-2"
+          >Join Community</a
+        >
+        <a
+          href="/airdrop.html"
+          class="text-primary hover:text-blue-500 block py-2"
+          >Claim Airdrop Bot</a
+        >
+        <a
+          href="/authenticate.html"
+          class="text-primary hover:text-blue-500 block py-2"
+          >Authenticate</a
+        >
+      </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="container mx-auto pt-2 pb-8 hero-bg px-4">
+      <div class="flex flex-col">
+        <div class="md:w-1/2 md:mr-8">
+          <h1 class="font-light text-primary tracking-widest uppercase text-xs">
+            Welcome to Friend.Tech
+          </h1>
+          <p class="text-4xl">Don’t Delay, Invest Today</p>
+          <p class="mt-2 text-gray-800">
+            friend.tech is a legal company registered in UK. We provide trading
+            solutions to our worldwide customers to trade in foreign exchange,
+            crypto coins and bitcoins metals like gold and silver.
+          </p>
+          <div class="flex flex-col gap-2 my-3">
+            <div class="flex items-center gap-4">
+              <p class="text-3xl">15+</p>
+              Years Of Experience
+            </div>
+            <div class="flex items-center gap-4">
+              <p class="text-3xl">99k</p>
+              Satisfied & Happy Users
+            </div>
+          </div>
+          <div
+            class="mt-2 md:mt-8 flex flex-col justify-center items-center text-center gap-2"
+          >
+            <!-- Adjusted margin here -->
+            <a href="#" class="btn primary-blue text-white start-button"
+              >Get Started</a
+            >
+            <a
+              href="/investment.html/#about-investment"
+              class="btn-secondary text-primary btn border border-[#20BAF6]"
+              >Learn More</a
+            >
+          </div>
+        </div>
+        <!-- <div class="md:w-1/2 mt-4 md:mt-0">
+
+          <img
+            src="/public/home-hero.png"
+            alt="Hero Image"
+            class="w-1/2 mx-auto h-auto rounded-lg shadow-lg"
+          />
+        </div> -->
+      </div>
+    </div>
+
+    <section class="p-4 primary-blue flex justify-center items-center">
+      <img
+        src="https://coinhashtxt.com/wp-content/uploads/2022/08/client_4-1-150x150.png"
+        alt="Client Image"
+        loading="lazy"
+      />
+    </section>
+
+    <section id="about-investment" class="p-4 text-center">
+      <h6 class="text-xl">About us</h6>
+      <h3 class="font-bold text-2xl my-2">About friend.tech</h3>
+      <p class="pb-4">
+        Friendtech is the first web3 decentralized Chain protocol built across
+        all chains to analyze and maximize profits and security manage potential
+        security options in its own interface.
+      </p>
+      <a href="#" class="btn btn-primary start-button primary-blue text-white"
+        >Get Started</a
+      >
+      <div class="mt-6">
+        <img
+          src="https://coinhashtxt.com/wp-content/uploads/2022/08/business-freelance-and-work-concept-satisfied-fe-B8C2PCR.jpg"
+          alt="Business Image"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <section class="p-4 text-center light-blue py-4">
+      <h6 class="text-xl my-2">How It Works</h6>
+      <h3 class="font-bold text-2xl">How friend.tech works</h3>
+      <p>
+        We provide our investors with easy add to interact one on one with our
+        professional traders and also copy their trades.
+      </p>
+      <div class="flex flex-wrap space-x-4">
+        <div class="flex flex-col items-center">
+          <div class="w-1/4 my-4">
+            <img
+              src="https://coinhashtxt.com/wp-content/uploads/2022/08/icon_1_3.png"
+              alt="ETF Icon"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-bold text-xl">ETF</h3>
+          <p>
+            ETF? Like a mutual fund, an ETF is a pooled investment fund that
+            offers an investor an interest in a professionally managed,
+            diversified portfolio of investments.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-1/4 my-4">
+            <img
+              src="https://coinhashtxt.com/wp-content/uploads/2022/08/icon_2_3.png"
+              alt="API Icon"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-bold text-xl">API</h3>
+          <p>
+            For investment purposes, an API (Application Programming Interface)
+            is a set of functions that allows applications to access data and
+            interact with external software components.
+          </p>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-1/4 my-4">
+            <img
+              src="https://coinhashtxt.com/wp-content/uploads/2022/08/icon_2_3.png"
+              alt="Start Invest Icon"
+              loading="lazy"
+            />
+          </div>
+          <h3 class="font-bold text-xl">Start Invest</h3>
+          <p class="mb-4">
+            Click on the link below and visit our mouthwatering offers.
+          </p>
+        </div>
+      </div>
+      <a href="#" class="btn start-button primary-blue text-white"
+        >Get Started</a
+      >
+    </section>
+
+    <section class="px-4 py-8 text-center">
+      <img
+        src="https://coinhashtxt.com/wp-content/uploads/2022/08/couple-paying-with-credit-card-38BCU7P.jpeg"
+        class="w-full rounded-lg"
+        alt="Couple paying with credit card"
+        loading="lazy"
+      />
+      <h6 class="mt-4 text-xl text-primary">Why Choose Us</h6>
+      <h3 class="text-3xl font-bold">Dreams Come True When You Invest</h3>
+      <p class="mt-4 text-lg">
+        We've helped thousands of investors achieve their dreams through wise
+        investments.
+      </p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="flex flex-col justify-center gap-1 items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8 stroke-current"
+          >
+            <path
+              d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+            <path
+              d="M12.905 3.06C12.699 3 12.465 3 12 3c-.466 0-.699 0-.905.06a1.5 1.5 0 00-.76.515c-.133.169-.22.385-.392.818a1.265 1.265 0 01-1.574.73l-.571-.19c-.405-.135-.608-.203-.806-.214a1.5 1.5 0 00-.835.197c-.172.099-.323.25-.625.552-.32.32-.481.48-.583.664a1.5 1.5 0 00-.181.884c.021.208.105.418.274.84.264.66.01 1.413-.6 1.778l-.277.167c-.425.255-.637.382-.791.558a1.5 1.5 0 00-.303.534C3 11.116 3 11.366 3 11.866c0 .593 0 .89.095 1.143a1.5 1.5 0 00.396.586c.2.182.473.29 1.018.508.556.223.843.841.653 1.41l-.215.645c-.149.447-.223.671-.23.89a1.5 1.5 0 00.179.759c.104.193.27.36.604.693.333.333.5.5.693.604a1.5 1.5 0 00.758.18c.22-.008.444-.082.89-.231l.528-.176a1.265 1.265 0 011.574.73c.173.433.26.65.392.818a1.5 1.5 0 00.76.515c.206.06.44.06.905.06.466 0 .699 0 .905-.06a1.5 1.5 0 00.76-.515c.133-.169.22-.385.392-.818a1.265 1.265 0 011.574-.73l.527.176c.447.149.67.223.89.23a1.5 1.5 0 00.758-.179c.194-.104.36-.27.694-.604.333-.333.5-.5.604-.693a1.5 1.5 0 00.179-.758c-.007-.22-.082-.444-.23-.89l-.216-.646a1.133 1.133 0 01.654-1.41c.545-.217.817-.326 1.018-.508a1.5 1.5 0 00.396-.586c.095-.254.095-.55.095-1.143 0-.5 0-.75-.071-.973a1.5 1.5 0 00-.302-.534c-.155-.176-.367-.303-.792-.558l-.278-.167a1.447 1.447 0 01-.6-1.778c.17-.422.253-.632.275-.84a1.5 1.5 0 00-.181-.884c-.102-.183-.263-.344-.583-.664-.302-.302-.453-.453-.625-.552a1.5 1.5 0 00-.835-.197c-.199.011-.401.079-.806.214l-.57.19a1.265 1.265 0 01-1.575-.73c-.173-.433-.26-.65-.392-.818a1.5 1.5 0 00-.76-.515z"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <div class="ml-4">
+            <h6 class="text-xl font-semibold">Real Time Checkup</h6>
+            <p class="mt-2">
+              Make sure to inform of live support chat on the country where
+              which you are interacting from.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center gap-1 items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8 stroke-current"
+          >
+            <path
+              d="M12 14.5v2m-5-6.471C7.471 10 8.053 10 8.8 10h6.4c.747 0 1.329 0 1.8.029m-10 0c-.588.036-1.006.117-1.362.298a3 3 0 00-1.311 1.311C4 12.28 4 13.12 4 14.8v1.4c0 1.68 0 2.52.327 3.162a3 3 0 001.311 1.311C6.28 21 7.12 21 8.8 21h6.4c1.68 0 2.52 0 3.162-.327a3 3 0 001.311-1.311C20 18.72 20 17.88 20 16.2v-1.4c0-1.68 0-2.52-.327-3.162a3 3 0 00-1.311-1.311c-.356-.181-.774-.262-1.362-.298m-10 0V8a5 5 0 0110 0v2.029"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <div class="ml-4">
+            <h6 class="text-xl font-semibold">Safe Passcode</h6>
+            <p class="mt-2">
+              As an investor your passcode should and must be kept private,
+              create a unique passcode and secure your investment.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center gap-1 items-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8 stroke-current"
+          >
+            <path
+              d="M12 7v5l2.5-1.5h2V21h6V3H5m2 2h2v2H7V5m4 0h2v2h-2V5m4 0h2v2h-2V5M7 9h2v2H7V9m4 0h2v2h-2V9m4 0h2v2h-2V9m-8 4h2v2H7v-2m4 0h2v2h-2v-2m4 0h2v2h-2v-2z"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <div class="ml-4">
+            <h6 class="text-xl font-semibold">Full Time Service</h6>
+            <p class="mt-2">We are available 24/7, week-in and week-out.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="px-4 py-8 light-blue">
+      <div class="text-center">
+        <h2 class="text-4xl font-bold">1,200+</h2>
+        <p class="mt-2 text-lg">Loyal Clients</p>
+      </div>
+      <div class="mt-8 text-center">
+        <h2 class="text-4xl font-bold">30%</h2>
+        <p class="mt-2 text-lg">Avg Annual Return</p>
+      </div>
+      <div class="mt-8 text-center">
+        <h2 class="text-4xl font-bold">7+</h2>
+        <p class="mt-2 text-lg">Years Of Experience</p>
+      </div>
+      <div class="mt-8 text-center">
+        <h2 class="text-4xl font-bold">110M+</h2>
+        <p class="mt-2 text-lg">Total Invested</p>
+      </div>
+    </section>
+
+    <section class="px-4 py-8 text-center">
+      <h6 class="text-xl font-semibold">Our Services</h6>
+      <h3 class="mt-4 text-3xl font-bold">friend.tech Financial Services</h3>
+      <p class="mt-4 text-lg">
+        Reasons why friend.tech is the leader in the field of investing.
+      </p>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="flex flex-col justify-center items-center border py-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8 stroke-current"
+          >
+            <path
+              d="M22 12.204v1.521c0 3.9 0 5.851-1.172 7.063C19.657 22 17.771 22 14 22h-4c-3.771 0-5.657 0-6.828-1.212C2 19.576 2 17.626 2 13.725v-1.521c0-2.289 0-3.433.52-4.381.518-.949 1.467-1.537 3.364-2.715l2-1.241C9.889 2.622 10.892 2 12 2c1.108 0 2.11.622 4.116 1.867l2 1.241c1.897 1.178 2.846 1.766 3.365 2.715M15 18H9"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <div class="ml-4">
+            <h6 class="text-xl font-semibold">Retirement Plans</h6>
+            <p class="mt-2">
+              So many have actually been using our Gold plan for a retirement
+              package, why waste more time, sign up now!
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center border py-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24"
+            fill="none"
+            class="w-8 h-8 stroke-current"
+          >
+            <path
+              d="M8 8h.01M8 12h.01M16 12h.01M16 8h.01M16 16h.01M8 16h.01m-.81 4h9.6c1.12 0 1.68 0 2.108-.218a2 2 0 00.874-.874C20 18.48 20 17.92 20 16.8V7.2c0-1.12 0-1.68-.218-2.108a2 2 0 00-.874-.874C18.48 4 17.92 4 16.8 4H7.2c-1.12 0-1.68 0-2.108.218a2 2 0 00-.874.874C4 5.52 4 6.08 4 7.2v9.6c0 1.12 0 1.68.218 2.108a2 2 0 00.874.874C5.52 20 6.08 20 7.2 20z"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            ></path>
+          </svg>
+          <div class="ml-4">
+            <h6 class="text-xl font-semibold">Risk Management</h6>
+            <p class="mt-2">
+              Customer service is very important, as a result of customer
+              support, professional advice and proper risk management.
+            </p>
+          </div>
+        </div>
+        <div class="flex flex-col justify-center items-center border py-4">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            version="1.1"
+            viewBox="0 0 24 24"
+            xml:space="preserve"
+            fill="none"
+            class="w-8 h-8 stroke-current"
+          >
+            <path
+              d="M5 3v18h6v-3.5h2V21h6V3H5m2 2h2v2H7V5m4 0h2v2h-2V5m4 0h2v2h-2V5M7 9h2v2H7V9m4 0h2v2h-2V9m4 0h2v2h-2V9m-8 4h2v2H7v-2m4 0h2v2h-2v-2m4 0h2v2h-2v-2z"
+            ></path>
+          </svg>
+          <div class="ml-4">
+            <h6 class="text-xl font-semibold">Estate Planning</h6>
+            <p class="mt-2">
+              Estate planning is available for our Golden Plan investors only.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-4 light-blue text-center">
+      <h6 class="text-xl py-2">Invest Now</h6>
+      <h3 class="font-bold text-2xl">We Know How To Invest Your Money</h3>
+      <div class="flex flex-wrap space-x-4">
+        <div class="flex flex-col items-center">
+          <div class="w-1/4 my-4">
+            <img
+              src="https://coinhashtxt.com/wp-content/uploads/2022/08/Asset-6.png"
+              alt="Any Investment Icon"
+              loading="lazy"
+            />
+          </div>
+          <h6 class=" text-xl">Any Investment You Want</h6>
+        </div>
+        <div class="flex flex-col items-center">
+          <div class="w-1/4 my-4">
+            <img
+              src="https://coinhashtxt.com/wp-content/uploads/2022/08/Asset-7.png"
+              alt="No Investment Fee Icon"
+              loading="lazy"
+            />
+          </div>
+
+          <h6 class=" text-xl">No Investment Fee</h6>
+        </div>
+        <div class="flex flex-col items-center mb-4">
+          <div class="w-1/4 my-4">
+            <img
+              src="https://coinhashtxt.com/wp-content/uploads/2022/08/Asset-8.png"
+              alt="Most Secure Investment Icon"
+              loading="lazy"
+            />
+          </div>
+          <h6 class=" text-xl">Most Secure Investment</h6>
+        </div>
+      </div>
+      <a href="#" class="btn btn-primary start-button text-white primary-blue">Get Started</a>
+    </section>
+
+    <!-- Footer -->
+    <div class="bg-[#09455C] text-white my-section">
+      <div class="container mx-auto flex flex-wrap">
+        <div class="w-full md:w-1/4 md:text-left">
+          <a class="" href="/index.html">friend.tech</a>
+          <p class="text-sm">Where Innovation Meets Finance.</p>
+        </div>
+        <div class="w-full md:w-3/4 md:flex md:flex-wrap">
+          <div class="w-full md:w-1/4 md:text-left">
+            <h3 class="text-lg">Main Menu</h3>
+            <div class="mt-2">
+              <a class="text-sm" href="/loan.html">Loan</a><br />
+              <a class="text-sm" href="/waitlist.html">Waitlist</a><br />
+              <a class="text-sm" href="/whitelist.html">Whitelist</a><br />
+              <a class="text-sm" href="/mint.html">Mint</a><br />
+              <a class="text-sm" href="/investment.html">Invest</a>
+            </div>
+          </div>
+          <div class="w-full md:w-1/4 md:text-left">
+            <h3 class="text-lg">Services</h3>
+            <div class="mt-2">
+              <a class="text-sm" href="/community.html">Join Community</a><br />
+              <a class="text-sm" href="/airdrop.html">Claim Airdrop Bot</a
+              ><br />
+              <a class="text-sm" href="/authenticate.html">Authenticate</a>
+            </div>
+          </div>
+      
+          <div class="w-full md:w-1/4 md:text-left">
+            <h3 class="text-lg">Follow Us</h3>
+            <div class="mt-2">
+              <a class="" href="https://twitter.com/friendtech">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  height="1em"
+                  width="1em"
+                  class="inline-block w-6 h-6 align-text-bottom"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.783 3.918a4.73 4.73 0 00.79-.249c.28-.12.51-.263.876-.504A1 1 0 0123 4c0 1.08-.135 1.967-.447 2.746a5.47 5.47 0 01-1.071 1.674c-.187 3.363-1.16 6.004-2.648 8.005-1.543 2.074-3.595 3.402-5.759 4.146-2.157.741-4.436.907-6.478.656-2.029-.25-3.904-.921-5.211-1.938a1 1 0 01.755-1.78c1.286.185 2.524-.108 3.542-.526-.2-.109-.39-.227-.565-.348-.927-.643-1.676-1.514-2.012-2.188A1 1 0 013.4 13.2c-1.353-1.119-1.9-2.664-1.9-3.7a1 1 0 01.723-.96 7.357 7.357 0 01-.24-.887c-.266-1.287-.242-2.74.047-3.895A1 1 0 013.866 3.5c1.078 1.868 3.065 3.01 4.915 3.686.87.318 1.675.52 2.279.645.13-1.22.47-2.227.994-3.027a4.586 4.586 0 012.686-1.957c1.783-.48 3.76.067 5.043 1.071zm-9.035 5.89a18.334 18.334 0 01-2.654-.744c-1.357-.496-2.933-1.27-4.253-2.468.023.22.057.439.1.652.222 1.071.633 1.671 1.006 1.857a1 1 0 01.49 1.242c-.239.648-.869.7-1.441.558.46.69 1.288 1.378 2.668 1.609a1 1 0 01.032 1.966l-.87.175c.133.115.277.229.43.335.698.483 1.397.69 2.001.54a1 1 0 01.883 1.738c-.644.536-1.396.966-2.15 1.323-.353.168-.749.333-1.178.479.33.07.674.128 1.029.172 1.77.217 3.741.07 5.584-.563 1.836-.631 3.534-1.74 4.804-3.448 1.268-1.705 2.153-4.064 2.272-7.268a1 1 0 01.292-.67c.45-.45.821-.965 1.004-1.579-.32.1-.68.186-1.11.268a1 1 0 01-.894-.275c-.765-.764-2.277-1.267-3.533-.929A2.587 2.587 0 0013.727 5.9C13.315 6.53 13 7.51 13 9a1 1 0 01-.33.743c-.498.45-1.336.184-1.922.066z"
+                    fill="currentColor"
+                  ></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="w-full mt-6 text-right">
+          <p class="text-xs">Copyright © 2023 Friend Tech.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scripts and additional footers -->
+    <script src="script.js"></script>
+    <!-- Add other script tags and footers as needed -->
+  </body>
+</html>
